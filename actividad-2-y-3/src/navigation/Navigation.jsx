@@ -1,19 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { createBottonTabNavigator } from '@react-navigation/bottom-tabs';
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; // Corregido aquí
 import { NavigationContainer } from '@react-navigation/native';
 import { Icon } from '@rneui/base';
 import LoginStack from './stacks/LoginStack';
 import CreatAccount from '../screens/CreateAccount';
-const Tab = createBottonTabNavigator();
+
+const Tab = createBottomTabNavigator(); // Corregido aquí
+
 export default function Navigation() {
     return (
         <NavigationContainer>
             <Tab.Navigator 
-                screenOptions={({route}) => ({
-                    tabBarIcon:({focused, color, size}) =>{
-                        const{iconName, iconType} = getIconName(route.name, focused);
-                        return(
+                screenOptions={({ route }) => ({
+                    tabBarIcon: ({ focused, color, size }) => {
+                        const { iconName, iconType } = getIconName(route.name, focused);
+                        return (
                             <Icon name={iconName} type={iconType} size={size} color={color} />
                         );
                     },
@@ -37,7 +39,7 @@ export default function Navigation() {
     );
 }
 
-const getIconName = (routeName, focusesd) =>{
+const getIconName = (routeName, focused) => { // Corregido aquí (focused en lugar de focusesd)
     let iconName = "";
     let iconType = "material-community";
     switch (routeName) {
@@ -48,8 +50,7 @@ const getIconName = (routeName, focusesd) =>{
             iconName = focused ? 'account-plus' : 'account-plus-outline';
             break;
     }
-    return{iconName, iconType};
-}
+    return { iconName, iconType };
+};
 
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

@@ -2,10 +2,9 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "@rneui/base";
-import LoginStack from "../navigation/stacks/LoginStack";
-import Profile from "../kernel/components/modules/auth/screens/Profile";
-import HomeStack from "./stack/navigationLoggerStarck/HomeStack";
-import TopventasStack from "../navigation/stacks/navigationLoggerStack/TopventasStack";
+import HomeStack from "./stacks/navigationLoggerStack/HomeStack"; 
+import TopventasStack from "./stacks/navigationLoggerStack/TopventasStack"; // Ruta ajustada
+import Profile from '../screens/Profile'; // Asegúrate de que existe esta ruta
 
 const Tab = createBottomTabNavigator();
 
@@ -35,7 +34,7 @@ export default function NavigationLogger() {
                 <Tab.Screen
                     name="TopventasStack"
                     component={TopventasStack}
-                    options={{ title: "Top 5" }}
+                    options={{ title: "Top ventas" }}
                 />
 
                 <Tab.Screen

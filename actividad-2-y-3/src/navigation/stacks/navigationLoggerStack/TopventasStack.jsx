@@ -4,7 +4,7 @@ import React from 'react'
 export default function TopventasStack() {
     return (
         <View>
-            <Text>TopventasStack</Text>
+            <Text>Topventas</Text>
         </View>
     )
 }
