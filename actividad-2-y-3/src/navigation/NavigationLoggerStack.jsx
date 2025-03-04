@@ -3,8 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "@rneui/base";
 import HomeStack from "./stacks/navigationLoggerStack/HomeStack"; 
-import TopventasStack from "./stacks/navigationLoggerStack/TopventasStack"; // Ruta ajustada
-import Profile from '../screens/Profile'; // Asegúrate de que existe esta ruta
+import TopventasStack from "./stacks/navigationLoggerStack/TopventasStack"; 
+import Profile from '../screens/Profile';
 
 const Tab = createBottomTabNavigator();
 

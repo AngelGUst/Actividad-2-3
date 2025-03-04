@@ -39,7 +39,7 @@ export default function Navigation() {
     );
 }
 
-const getIconName = (routeName, focused) => { // Corregido aquí (focused en lugar de focusesd)
+const getIconName = (routeName, focused) => { 
     let iconName = "";
     let iconType = "material-community";
     switch (routeName) {
